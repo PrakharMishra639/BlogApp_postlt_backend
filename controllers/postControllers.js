@@ -30,7 +30,7 @@ const updatePost = async (req, res, next) => {
     const post = await Post.findOne({ slug: req.params.slug });
 
     if (!post) {
-      const error = new Error("Post aws not found");
+      const error = new Error("Post was not found");
       next(error);
       return;
     }
